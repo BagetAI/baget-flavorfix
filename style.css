@@ -1,0 +1,267 @@
+/* Neo-Brutalist style with FlavorFix brand colors */
+
+:root {
+    --brand-primary: #D2691E;      /* Burnt Orange */
+    --brand-secondary: #4CAF50;    /* Forest Green */
+    --brand-accent: #FFD700;       /* Golden Yellow */
+    
+    --brand-neutral-100: #F8F8F8;  /* Lightest - Clean background */
+    --brand-neutral-500: #888888;  /* Medium - Body text, subtle accents */
+    --brand-neutral-900: #333333;  /* Darkest - Headings, strong contrast */
+
+    --bg-cream: #FFFCE1; /* Neo-Brutalist cream background */
+    --text-black: #000000;
+    --border-thickness: 3px;
+    --shadow-offset: 4px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0; /* Neo-Brutalist */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-black);
+    background-color: var(--bg-cream);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase; /* Neo-Brutalist */
+    color: var(--text-black);
+    margin-bottom: 0.5em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Neo-Brutalist Element Styling */
+.hero, .section, .footer, .button, .waitlist-form input, .waitlist-form button, .product-card, .recipe-card-promo {
+    border: var(--border-thickness) solid var(--text-black);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-black);
+    margin-bottom: 20px; /* Add some margin for visual separation */
+    background-color: var(--brand-neutral-100); /* Default background for sections */
+}
+
+.hero {
+    background-color: var(--brand-accent); /* Golden Yellow for hero */
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: var(--brand-primary); /* Burnt orange for the main brand name */
+    margin-bottom: 10px;
+}
+
+.hero .tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-headline {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtext {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.waitlist-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bg-cream); /* Cream background for the form itself */
+}
+
+.waitlist-form input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: var(--border-thickness) solid var(--text-black);
+    background-color: white;
+    font-size: 1em;
+    outline: none;
+}
+
+.button {
+    background-color: var(--brand-primary); /* Burnt Orange for CTA */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: var(--border-thickness) solid var(--text-black);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-black);
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: var(--brand-primary-dark); /* Darker orange on hover */
+    box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0 var(--text-black);
+}
+
+.form-message {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.section {
+    padding: 60px 20px;
+    background-color: var(--bg-cream); /* Cream background for sections */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section.problem-solution {
+    background-color: var(--brand-neutral-100);
+    flex-direction: row; /* Arrange side-by-side on larger screens */
+    justify-content: space-around;
+}
+
+.section-content {
+    flex: 1;
+    padding: 30px;
+    border: var(--border-thickness) solid var(--text-black);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-black);
+    background-color: white;
+}
+
+.section-content h3 {
+    color: var(--brand-secondary); /* Forest Green for problem/solution headings */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.product-showcase {
+    background-color: var(--brand-neutral-100);
+    padding-bottom: 80px;
+}
+
+.product-showcase h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--brand-primary); /* Burnt Orange for showcase heading */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: var(--border-thickness) solid var(--text-black);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-black);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border: var(--border-thickness) solid var(--brand-neutral-500);
+    box-shadow: 2px 2px 0 var(--brand-neutral-500);
+}
+
+.product-card h4 {
+    color: var(--brand-secondary); /* Forest Green for product names */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.recipe-card-promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--brand-accent); /* Golden Yellow for promo section */
+    padding: 40px;
+    text-align: center;
+}
+
+.recipe-card-promo img {
+    max-width: 300px;
+    height: auto;
+    border: var(--border-thickness) solid var(--text-black);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-black);
+}
+
+.recipe-card-promo h3 {
+    font-size: 2em;
+    color: var(--brand-primary); /* Burnt Orange for promo heading */
+}
+
+.recipe-card-promo p {
+    font-size: 1.1em;
+}
+
+.footer {
+    background-color: var(--text-black);
+    color: var(--bg-cream);
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 0; /* Remove bottom margin for footer */
+    box-shadow: none; /* No shadow on footer */
+    border: none; /* No border on footer */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-headline {
+        font-size: 1.8em;
+    }
+
+    .section.problem-solution {
+        flex-direction: column;
+    }
+
+    .section-content {
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card-promo {
+        flex-direction: column;
+    }
+}
